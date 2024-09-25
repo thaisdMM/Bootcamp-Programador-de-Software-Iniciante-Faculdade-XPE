@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head lang="pt-BR">
+  <meta charset="utf-8" />
+  <title>Seletor de elemento CSS</title>
+</head>
+<body>
+  <style>
+    div {
+      border: 2px solid gray;
+      margin: 5px;
+    }
+    .c1 div {
+      border-style: dashed;
+    }
+    .c1 > div {
+      border-color: red;
+    }
+  </style>
+  <div class="c1">
+    div1
+    <div>
+      div 1.1
+      <div>div 1.1.1</div>
+    </div>
+    <div>div 1.2</div>
+  </div>
+</body>

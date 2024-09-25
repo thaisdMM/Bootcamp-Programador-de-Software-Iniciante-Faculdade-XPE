@@ -1,0 +1,126 @@
+.logo {
+  width: 190px;
+  margin: -4px 8px 0 8px;
+  height: 38px;
+  background-image: url(sprites.svg);
+  background-position: 0 --500px;
+}
+
+#placeholder-content {
+  height: 800px;
+}
+
+#placeholder-footer {
+  height: 100px;
+}
+
+html {
+  font-family: apple-system, "system-ui", "Segoe UI Adjusted", "Segoe UI",
+    "Liberation sans", sans-serif;
+  font-size: 13px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  border-top: 3px solid rgb(231, 112, 13);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 4px 0px, rgba(0, 0, 0, 0.05) 0px 2px 8px 0px;
+}
+
+nav a.current {
+  background-color: #f1f2f3;
+  color: rgb(12, 13, 14);
+  text-decoration: none;
+  border-right: 3px solid rgb(231, 112, 13);
+  font-weight: 700;
+  display: block;
+  padding-left: 8px;
+  line-height: 25px;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 27px;
+  font-weight: 400px;
+}
+
+.panel {
+  border: 1px solid rgb(227, 230, 232);
+  box-shadow: rgb(0, 0, 0, 0.5) 0px 1px 2px 0px,
+    rgba(0, 0, 0, 0.5) 0px 2px 8px 0px;
+  margin-bottom: 16px;
+  width: 268px;
+  border-radius: 4px;
+}
+
+.panel > h2 {
+  background-color: #f9fafa;
+  margin: 0;
+  padding: 12px 15px;
+  color: rgb(59, 64, 69);
+  font-size: 15px;
+  font-weight: 400;
+  border-bottom: 1px solid rgb(227, 230, 232);
+}
+
+.panel > div {
+  padding: 12px 15px;
+}
+
+footer {
+  background-color: rgb(12, 13, 14);
+  color: rgb(186, 191, 197);
+}
+
+body {
+  margin: 0;
+}
+
+.header-inner {
+  height: 52px;
+  display: flex;
+  align-items: center;
+}
+.header-inner,
+.middle-area,
+.footer-area {
+  max-width: 1264px;
+  margin: auto;
+}
+
+.middle-area {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: row;
+}
+
+.content-area {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  border-left: 1px solid rgb(214, 217, 220);
+  padding: 24px;
+}
+
+.nav-area {
+  padding-top: 24px;
+}
+
+main {
+  flex: 1 1 450px;
+}
+
+nav {
+  position: sticky;
+  top: 76px;
+  width: 164px;
+}
+
+.footer-area {
+  padding: 24px;
+}
