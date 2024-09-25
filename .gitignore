@@ -1,2 +1,66 @@
 
 .DS_Store
+# Arquivos do sistema operacional macOS
+.DS_Store
+Thumbs.db
+
+# Arquivos Eclipse
+.project
+.classpath
+.settings/
+.metadata/
+# Ignorar tudo dentro da pasta .metadata
+**/.metadata/
+**/.metadata/**
+**/.metadata/.lock
+**/.metadata/.log
+
+# Arquivos específicos do Eclipse Java Development Tools (JDT)
+**/.settings/org.eclipse.jdt.core.prefs
+**/org.eclipse.jdt.core/state.dat
+
+# Arquivos Mylyn (gerenciamento de tarefas do Eclipse)
+**/.mylyn/
+
+# Arquivos de configurações de execução/debug do Eclipse
+**/.settings/org.eclipse.debug.core.prefs
+**/.settings/org.eclipse.debug.ui.prefs
+
+# Arquivos de plugins do Eclipse (EGit, M2E, Mylyn, etc.)
+**/.plugins/org.eclipse.core.resources/.projects/**
+**/.plugins/org.eclipse.core.runtime/.settings/
+**/.plugins/org.eclipse.egit.core.cmp/
+**/.plugins/org.eclipse.m2e.discovery.prefs
+**/.plugins/org.eclipse.mylyn.tasks.ui.prefs
+**/.plugins/org.eclipse.mylyn.monitor.ui.prefs
+**/.plugins/org.eclipse.mylyn.context.core.prefs
+
+# Diretórios de build e binários
+bin/
+target/
+build/
+
+# Arquivos de log e temporários
+*.log
+*.tmp
+
+# Arquivos do Maven (se você estiver usando Maven no projeto)
+mvnw
+mvnw.cmd
+.gradle/
+build/
+
+# Arquivos do Gradle (se você estiver usando Gradle no projeto)
+.gradle/
+build/
+
+# Arquivos gerados por pacotes ou bibliotecas externas
+lib/
+
+# Arquivos de configuração de IDEs (além do Eclipse)
+.idea/
+.vscode/
+
+# Arquivos de cache
+**/Thumbs.db
+**/*.lock

@@ -1,0 +1,8 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module ProjetoOrientacaoObjeto2Encapsulamento {
+}
