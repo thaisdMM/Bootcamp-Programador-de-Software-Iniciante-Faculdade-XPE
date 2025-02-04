@@ -10,4 +10,10 @@ function initMultipleFieldSet(fs) {
    addButton.textContent = "Adicionar";
 
    fs.appendChild(addButton);
+
+   addButton.addEventListener("click", function() {
+      var newInput = document.createElement("input");
+      fs.appendChild(newInput);
+
+   });
 }
