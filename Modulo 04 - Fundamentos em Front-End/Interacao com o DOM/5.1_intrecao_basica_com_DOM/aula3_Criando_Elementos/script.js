@@ -8,6 +8,7 @@ for (var i = 0; i < fslist.length; i++){
 function initMultipleFieldSet(fs) {
    var addButton = document.createElement("button");
    addButton.textContent = "Adicionar";
+   addButton.type = "button";
 
    fs.appendChild(addButton);
 
