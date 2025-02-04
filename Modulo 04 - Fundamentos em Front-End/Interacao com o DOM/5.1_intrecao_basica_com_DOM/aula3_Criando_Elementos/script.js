@@ -11,9 +11,15 @@ function initMultipleFieldSet(fs) {
 
   fs.appendChild(addButton);
 
+  var  firstInput = fs.querySelector("input");
+
   addButton.addEventListener("click", function () {
     var div = document.createElement("div");
     var newInput = document.createElement("input");
+    newInput.name = firstInput.name;
+    newInput.type = firstInput.type;
+   
+
     div.appendChild(newInput);
 
     fs.insertBefore(div, addButton);
