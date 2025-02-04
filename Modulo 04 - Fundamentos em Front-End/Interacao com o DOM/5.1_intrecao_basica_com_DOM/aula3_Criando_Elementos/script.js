@@ -13,8 +13,11 @@ function initMultipleFieldSet(fs) {
    fs.appendChild(addButton);
 
    addButton.addEventListener("click", function() {
+      var div = document.createElement("div");
       var newInput = document.createElement("input");
-      fs.appendChild(newInput);
+      div.appendChild(newInput);
+
+      fs.appendChild(div);
 
    });
 }
