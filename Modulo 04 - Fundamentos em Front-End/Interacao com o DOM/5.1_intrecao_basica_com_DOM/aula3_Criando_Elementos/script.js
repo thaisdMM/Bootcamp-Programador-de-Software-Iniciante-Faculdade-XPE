@@ -11,16 +11,20 @@ function initMultipleFieldSet(fs) {
 
   fs.appendChild(addButton);
 
-  var  firstInput = fs.querySelector("input");
+  var firstInput = fs.querySelector("input");
 
   addButton.addEventListener("click", function () {
     var div = document.createElement("div");
     var newInput = document.createElement("input");
     newInput.name = firstInput.name;
     newInput.type = firstInput.type;
-   
+
+    var deleteButton = document.createElement("button");
+    deleteButton.textContent = "Excluir";
+    deleteButton.type = "button";
 
     div.appendChild(newInput);
+    div.appendChild(deleteButton);
 
     fs.insertBefore(div, addButton);
   });
