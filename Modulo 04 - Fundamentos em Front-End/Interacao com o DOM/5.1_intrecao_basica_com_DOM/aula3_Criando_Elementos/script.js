@@ -26,6 +26,11 @@ function initMultipleFieldSet(fs) {
     div.appendChild(newInput);
     div.appendChild(deleteButton);
 
+    deleteButton.addEventListener("click", function() {
+      div.remove(); //maneira mais fácil
+      //fs.removeChild(div); pode ser usado esse codigo também
+    });
+
     fs.insertBefore(div, addButton);
   });
 }
