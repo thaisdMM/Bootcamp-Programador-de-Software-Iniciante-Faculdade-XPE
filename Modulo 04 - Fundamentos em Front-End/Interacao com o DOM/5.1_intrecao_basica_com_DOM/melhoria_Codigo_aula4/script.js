@@ -1,4 +1,5 @@
 var caixa = document.getElementById("caixa");
+var diagrama = document.getElementById("diagrama");
 var cx, cy;
 
 function setPos(x, y) {
@@ -9,7 +10,6 @@ function setPos(x, y) {
 caixa.addEventListener("mousedown", iniciaArraste);
 document.addEventListener("mouseup", terminaArraste);
 
-//cx e cy fazendo a correçao do x e do y em relacao ao pai para nao ficar em relação a viewport
 function iniciaArraste(evt) {
   cx = evt.clientX - pxParaNum(caixa.style.left);
   cy = evt.clientY - pxParaNum(caixa.style.top);
@@ -29,8 +29,12 @@ function arrasta(evt) {
   setPos(x - cx, y - cy);
 }
 
-//função para transformar os pixels(String) em numero
-// operador + para converter para numero
+// Pegamos as dimensões do diagrama e da caixa
+var maxX = diagrama.clientWidth;
+var caixaX = caixa.clientWidth;
+var maxY = diagrama.clientHeight;
+var caixaY = diagrama.clientHeight;
+
 function pxParaNum(s) {
   return +s.replace("px", "");
 }
