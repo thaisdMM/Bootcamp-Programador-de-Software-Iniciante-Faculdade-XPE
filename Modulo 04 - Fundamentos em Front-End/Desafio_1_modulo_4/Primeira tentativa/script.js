@@ -1,0 +1,1 @@
+var ncels = document.querySelectorAll("td");

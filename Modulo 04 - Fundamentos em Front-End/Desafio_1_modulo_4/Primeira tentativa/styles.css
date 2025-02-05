@@ -5,7 +5,7 @@ h1 {
 table {
   table-layout: fixed;
   border: 1px solid black;
-  
+  vertical-align:auto;
  
 }
 
@@ -15,11 +15,6 @@ tr {
   width: 50px;
 }
 
-th {
-   border: 1px solid black;
-   height: 50px;
-   width: 50px;
- }
 td {
   border: 1px solid black;
   height: 50px;
