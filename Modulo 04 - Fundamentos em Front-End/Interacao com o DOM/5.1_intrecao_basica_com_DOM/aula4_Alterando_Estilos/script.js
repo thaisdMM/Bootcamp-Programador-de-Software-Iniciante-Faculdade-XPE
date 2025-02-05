@@ -19,7 +19,7 @@ function iniciaArraste(evt) {
 }
 
 function terminaArraste(evt) {
-  caixa.classList.remove = "arrastando";
+  caixa.classList.remove = ("arrastando");
   document.removeEventListener("mousemove", arrasta);
 }
 
