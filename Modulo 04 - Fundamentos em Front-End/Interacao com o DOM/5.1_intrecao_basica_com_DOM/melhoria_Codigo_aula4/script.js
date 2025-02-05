@@ -27,13 +27,19 @@ function arrasta(evt) {
   var x = evt.clientX;
   var y = evt.clientY;
   setPos(x - cx, y - cy);
-}
 
-// Pegamos as dimensões do diagrama e da caixa
-var maxX = diagrama.clientWidth;
-var caixaX = caixa.clientWidth;
-var maxY = diagrama.clientHeight;
-var caixaY = caixa.clientHeight;
+  // Define os limites do movimento dentro do diagrama
+  var maxX = diagrama.clientWidth - caixa.clientWidth; // Máximo permitido no eixo X
+  var maxY = diagrama.clientHeight - caixa.clientHeight; // Máximo permitido no eixo Y
+
+  // Impede que a caixa ultrapasse os limites do diagrama
+  x = Math.max(0, Math.min(x, maxX)); // Garante que x fique entre 0 e maxX
+  y = Math.max(0, Math.min(y, maxY)); // Garante que y fique entre 0 e maxY
+
+  // Aplica a nova posição da caixa
+  caixa.style.left = x + "px";
+  caixa.style.top = y + "px";
+}
 
 function pxParaNum(s) {
   return +s.replace("px", "");
