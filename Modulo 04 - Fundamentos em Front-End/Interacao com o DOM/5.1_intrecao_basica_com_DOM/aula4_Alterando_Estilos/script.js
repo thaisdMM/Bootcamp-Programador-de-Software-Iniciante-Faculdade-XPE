@@ -1,4 +1,5 @@
 var caixa = document.getElementById("caixa");
+var cx, cy;
 
 function setPos(x, y) {
   caixa.style.top = y + "px";
@@ -10,10 +11,8 @@ document.addEventListener("mouseup", terminaArraste);
 
 //cx e cy fazendo a correçao do x e do y em relacao ao pai para nao ficar em relação a viewport
 function iniciaArraste(evt) {
-  var cx = evt.clientX; 
-  var cy = evt.clientY;
-  var xe = pxParaNum(caixa.style.left);
-  var ye = pxParaNum(caixa.style.top);
+  cx = evt.clientX - pxParaNum(caixa.style.left);
+  cy = evt.clientY - pxParaNum(caixa.style.top);
 
   caixa.classList.add("arrastando");
   document.addEventListener("mousemove", arrasta);
@@ -27,7 +26,7 @@ function terminaArraste(evt) {
 function arrasta(evt) {
   var x = evt.clientX;
   var y = evt.clientY;
-  setPos(x, y);
+  setPos(x - cx, y - cy);
 }
 
 //função para transformar os pixels(String) em numero
