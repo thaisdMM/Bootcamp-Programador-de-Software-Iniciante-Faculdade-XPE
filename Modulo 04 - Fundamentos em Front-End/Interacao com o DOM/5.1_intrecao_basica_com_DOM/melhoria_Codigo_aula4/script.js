@@ -36,9 +36,7 @@ function arrasta(evt) {
   x = Math.max(0, Math.min(x, maxX)); // Garante que x fique entre 0 e maxX
   y = Math.max(0, Math.min(y, maxY)); // Garante que y fique entre 0 e maxY
 
-  // Aplica a nova posição da caixa
-  caixa.style.left = x + "px";
-  caixa.style.top = y + "px";
+  setPos(x, y);
 }
 
 function pxParaNum(s) {
