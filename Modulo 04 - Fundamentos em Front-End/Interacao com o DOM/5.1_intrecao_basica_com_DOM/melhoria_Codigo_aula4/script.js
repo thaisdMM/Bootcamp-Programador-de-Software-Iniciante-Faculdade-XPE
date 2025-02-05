@@ -33,7 +33,7 @@ function arrasta(evt) {
 var maxX = diagrama.clientWidth;
 var caixaX = caixa.clientWidth;
 var maxY = diagrama.clientHeight;
-var caixaY = diagrama.clientHeight;
+var caixaY = caixa.clientHeight;
 
 function pxParaNum(s) {
   return +s.replace("px", "");
