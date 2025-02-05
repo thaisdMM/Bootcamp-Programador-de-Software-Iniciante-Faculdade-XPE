@@ -10,12 +10,12 @@ document.addEventListener("mouseup", terminaArraste);
 
 function iniciaArraste(evt) {
   caixa.classList.add("arrastando");
-  caixa.addEventListener("mousemove", arrasta);
+  document.addEventListener("mousemove", arrasta);
 }
 
 function terminaArraste(evt) {
   caixa.classList.remove = "arrastando";
-  caixa.removeEventListener("mousemove", arrasta);
+  document.removeEventListener("mousemove", arrasta);
 }
 
 function arrasta(evt) {
