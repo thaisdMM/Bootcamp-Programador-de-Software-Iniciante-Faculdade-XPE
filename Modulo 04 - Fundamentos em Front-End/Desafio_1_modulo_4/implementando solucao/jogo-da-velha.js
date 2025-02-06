@@ -5,12 +5,13 @@ function fazJogada(l, c) {
   var tr = tbody.children[l];
   var td = tr.children[c];
 
-  td.textContent = proximoJogador;
-
-  if (proximoJogador == "O") {
-    proximoJogador = "X";
-  } else {
-    proximoJogador = "O";
+  if (td.textContent == "") {
+    td.textContent = proximoJogador;
+    if (proximoJogador == "O") {
+      proximoJogador = "X";
+    } else {
+      proximoJogador = "O";
+    }
   }
 
   console.log("clicou na celula " + l + " " + c);
