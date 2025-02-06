@@ -1,6 +1,6 @@
-function fazJogada(l, c) {
-  var proximoJogador = "O";
+var proximoJogador = "O";
 
+function fazJogada(l, c) {
   var tbody = document.getElementById("tabuleiro");
   var tr = tbody.children[l];
   var td = tr.children[c];
@@ -8,9 +8,9 @@ function fazJogada(l, c) {
   td.textContent = proximoJogador;
 
   if (proximoJogador == "O") {
-    proximoJogador == "X";
+    proximoJogador = "X";
   } else {
-    proximoJogador == "O";
+    proximoJogador = "O";
   }
 
   console.log("clicou na celula " + l + " " + c);
