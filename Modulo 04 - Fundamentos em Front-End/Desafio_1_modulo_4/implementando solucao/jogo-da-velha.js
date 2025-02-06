@@ -16,3 +16,17 @@ function fazJogada(l, c) {
 
   console.log("clicou na celula " + l + " " + c);
 }
+
+function reinicia() {
+  proximoJogador = "O";
+  var tbody = document.getElementById("tabuleiro");
+
+  for (var i = 0; i < 3; i++) {
+    var tr = tbody.children[i];
+
+    for (var j = 0; j < 3; j++) {
+      var td = tr.children[j];
+      td.textContent = "";
+    }
+  }
+}
