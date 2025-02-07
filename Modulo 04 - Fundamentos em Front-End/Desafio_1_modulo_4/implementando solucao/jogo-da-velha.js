@@ -8,22 +8,29 @@ function fazJogada(l, c) {
   if (td.textContent == "") {
     td.textContent = proximoJogador; //Melhor momento para verificar um vencedor é após terminar de marcar a jogada
 
-    if(jogadorVenceu(proximoJogador)) {
+    if (jogadorVenceu(proximoJogador)) {
       //
-      console.log("jogador venceu: " +  proximoJogador);
-
-    } else { //se nao venceu continua a jogada
-       if (proximoJogador == "O") {
-      proximoJogador = "X";
+      console.log("jogador venceu: " + proximoJogador);
     } else {
-      proximoJogador = "O";
-   
-    }
-
+      //se nao venceu continua a jogada
+      if (proximoJogador == "O") {
+        proximoJogador = "X";
+      } else {
+        proximoJogador = "O";
+      }
     }
   }
+}
 
-  console.log("clicou na celula " + l + " " + c);
+function jogadorVenceu(jog) {
+   var tbody = document.getElementById("tabuleiro");
+   var tr = tbody.children[0];
+   var td = tr.children[0];
+   if() {
+
+   }
+
+
 }
 
 function reinicia() {
