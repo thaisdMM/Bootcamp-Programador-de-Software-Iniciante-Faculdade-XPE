@@ -1,7 +1,7 @@
+var tbody = document.getElementById("tabuleiro");
 var proximoJogador = "O";
 
 function fazJogada(l, c) {
-  var tbody = document.getElementById("tabuleiro");
   var tr = tbody.children[l];
   var td = tr.children[c];
 
@@ -22,9 +22,7 @@ function fazJogada(l, c) {
   }
 }
 
-function jogadorVenceu(jog) {
-   var tbody = document.getElementById("tabuleiro");
-   
+function jogadorVenceu(jog) { 
    if(cel(0,0) == jog && cel(0,1) == jog && cel(0,2) == jog) {
       return true;
 
@@ -32,15 +30,12 @@ function jogadorVenceu(jog) {
 }
 //função auxiliar para reduzir o tamanho do codigo jogadorVenceu
 function cel(l, c) {
-   var tbody = document.getElementById("tabuleiro");
-   return tbody.children[0].children[0].textContent;
+    return tbody.children[0].children[0].textContent;
    
 }
 
 function reinicia() {
   proximoJogador = "O";
-  var tbody = document.getElementById("tabuleiro");
-
   for (var i = 0; i < 3; i++) {
     var tr = tbody.children[i];
 
