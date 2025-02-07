@@ -75,3 +75,8 @@ function reinicia() {
     }
   }
 }
+
+function mudaTd(l, c, valor) {
+  var td = tbody.children[l].children[c];
+  td.textContent = valor;
+}
