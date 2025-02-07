@@ -22,16 +22,22 @@ function fazJogada(l, c) {
   }
 }
 
-function jogadorVenceu(jog) { 
-   if(cel(0,0) == jog && cel(0,1) == jog && cel(0,2) == jog) {
+function jogadorVenceu(jog) {
+  for (var i = 0; i < 3; i++) {
+    if (cel(i, 0) == jog && cel(i, 1) == jog && cel(i, 2) == jog) {
       return true;
-
-   }
+    }
+  }
+  for (var j = 0; j < 3; j++) {
+    if (cel(0, j) == jog && cel(1, j) == jog && cel(2, j) == jog) {
+      return true;
+    }
+  }
+  return false;
 }
 //função auxiliar para reduzir o tamanho do codigo jogadorVenceu
 function cel(l, c) {
-    return tbody.children[0].children[0].textContent;
-   
+  return tbody.children[l].children[c].textContent;
 }
 
 function reinicia() {
