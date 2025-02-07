@@ -1,5 +1,7 @@
 var tbody = document.getElementById("tabuleiro");
+var msg = document.getElementById("status");
 var proximoJogador = "O";
+msg.textContent = "Aguardando jogada de " + proximoJogador;
 
 function fazJogada(l, c) {
   var tr = tbody.children[l];
@@ -9,13 +11,14 @@ function fazJogada(l, c) {
     td.textContent = proximoJogador;
 
     if (jogadorVenceu(proximoJogador)) {
-      console.log("jogador venceu: " + proximoJogador);
+      msg.textContent = "Jogador " + proximoJogador + " venceu!";
     } else {
       if (proximoJogador == "O") {
         proximoJogador = "X";
       } else {
         proximoJogador = "O";
       }
+      msg.textContent = "Aguardando jogada de " + proximoJogador;
     }
   }
 }
@@ -43,6 +46,8 @@ function cel(l, c) {
 
 function reinicia() {
   proximoJogador = "O";
+  msg.textContent = "Aguardando jogada de " + proximoJogador;
+
   for (var i = 0; i < 3; i++) {
     var tr = tbody.children[i];
 
