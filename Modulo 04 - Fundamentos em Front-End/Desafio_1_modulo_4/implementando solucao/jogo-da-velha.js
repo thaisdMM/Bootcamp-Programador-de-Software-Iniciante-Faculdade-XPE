@@ -24,11 +24,8 @@ function fazJogada(l, c) {
 
 function jogadorVenceu(jog) {
    var tbody = document.getElementById("tabuleiro");
-   var td00 = cel(0,0);
-   var td01 = cel(0,1);
-   var td02 = cel(0,2);
    
-   if(td00 == jog && td01 == jog && td02 == jog) {
+   if(cel(0,0) == jog && cel(0,1) == jog && cel(0,2) == jog) {
       return true;
 
    }
