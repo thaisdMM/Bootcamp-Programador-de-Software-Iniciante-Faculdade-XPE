@@ -24,9 +24,12 @@ function fazJogada(l, c) {
 
 function jogadorVenceu(jog) {
    var tbody = document.getElementById("tabuleiro");
-   var tr = tbody.children[0];
-   var td = tr.children[0];
-   if() {
+   var td00 = tbody.children[0].children[0].textContent;
+   var td01 = tbody.children[0].children[1].textContent;
+   var td02 = tbody.children[0].children[2].textContent;
+   
+   if(td00 == jog && td01 == jog && td02 == jog) {
+      return true;
 
    }
 
