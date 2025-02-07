@@ -14,6 +14,9 @@ function fazJogada(l, c) {
     if (jogadorVenceu(proximoJogador)) {
       msg.textContent = "Jogador " + proximoJogador + " venceu!";
       terminou = true;
+    } else if (deuVelha()) {
+      msg.textContent = "Deu velha!";
+      terminou = true;
     } else {
       if (proximoJogador == "O") {
         proximoJogador = "X";
@@ -42,6 +45,18 @@ function jogadorVenceu(jog) {
   }
   return false;
 }
+
+function deuVelha() {
+  for (var i = 0; i < 3; i++) {
+    for (var j = 0; j < 3; j++) {
+      if (cel(i, j) == "") {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
 function cel(l, c) {
   return tbody.children[l].children[c].textContent;
 }
