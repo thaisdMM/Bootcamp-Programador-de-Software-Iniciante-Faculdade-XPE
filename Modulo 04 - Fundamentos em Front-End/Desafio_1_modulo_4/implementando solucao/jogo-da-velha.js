@@ -6,11 +6,20 @@ function fazJogada(l, c) {
   var td = tr.children[c];
 
   if (td.textContent == "") {
-    td.textContent = proximoJogador;
-    if (proximoJogador == "O") {
+    td.textContent = proximoJogador; //Melhor momento para verificar um vencedor é após terminar de marcar a jogada
+
+    if(jogadorVenceu(proximoJogador)) {
+      //
+      console.log("jogador venceu: " +  proximoJogador);
+
+    } else { //se nao venceu continua a jogada
+       if (proximoJogador == "O") {
       proximoJogador = "X";
     } else {
       proximoJogador = "O";
+   
+    }
+
     }
   }
 
