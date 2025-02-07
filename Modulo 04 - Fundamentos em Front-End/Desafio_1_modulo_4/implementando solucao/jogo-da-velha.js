@@ -32,6 +32,12 @@ function jogadorVenceu(jog) {
     if (cel(0, j) == jog && cel(1, j) == jog && cel(2, j) == jog) {
       return true;
     }
+    if (cel(0, 0) == jog && cel(1, 1) == jog && cel(2, 2) == jog) {
+      return true;
+    }
+    if (cel(0, 2) == jog && cel(1, j) == jog && cel(2, 0) == jog) {
+      return true;
+    }
   }
   return false;
 }
