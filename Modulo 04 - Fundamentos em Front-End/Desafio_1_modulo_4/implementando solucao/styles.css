@@ -21,7 +21,7 @@ td {
   text-align: center;
   cursor: pointer;
 }
-/* coloca o hover aqui por cauda da ordem de especificidade para que nao tennha efeito nas celulas já marcadas*/
+
 td:hover {
   background-color: #eee;
 }
@@ -36,6 +36,7 @@ td.X {
   background-color: rgba(0, 0, 255, 0.2);
 }
 
-button {
+button,
+p {
   font-size: 20px;
 }
