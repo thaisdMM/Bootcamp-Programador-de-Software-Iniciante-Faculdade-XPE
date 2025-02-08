@@ -15,9 +15,15 @@ class Quadrado extends Retangulo {
   constructor(dimensao) {
     super(dimensao, dimensao);
   }
+  // definindo novos membros na subclasse
+
+  imprimeNome() {
+    console.log("Quadrado");
+  }
 }
 
 var r1 = new Retangulo(3, 4);
 var r2 = new Retangulo(3, 8);
 
 var r3 = new Quadrado(3);
+r3.imprimeNome();
