@@ -5,11 +5,8 @@ var terminou = false;
 msg.textContent = "Aguardando jogada de " + proximoJogador;
 
 function fazJogada(l, c) {
-  var tr = tbody.children[l];
-  var td = tr.children[c];
-
-  if (!terminou && td.textContent == "") {
-    td.textContent = proximoJogador;
+  if (!terminou && cel(l,c) == "") {
+    mudaTd(l, c, proximoJogador);
 
     if (jogadorVenceu(proximoJogador)) {
       msg.textContent = "Jogador " + proximoJogador + " venceu!";
@@ -67,11 +64,8 @@ function reinicia() {
   terminou = false;
 
   for (var i = 0; i < 3; i++) {
-    var tr = tbody.children[i];
-
     for (var j = 0; j < 3; j++) {
-      var td = tr.children[j];
-      td.textContent = "";
+      mudaTd(l,c, "");
     }
   }
 }
