@@ -7,6 +7,10 @@ class Retangulo {
   area() {
     return this.altura * this.largura;
   }
+
+  imprimeNome() {
+    console.log("Retangulo");
+  }
 }
 
 //extends é a herança e cria uma subclasse de retangulo
@@ -24,6 +28,7 @@ class Quadrado extends Retangulo {
 
 var r1 = new Retangulo(3, 4);
 var r2 = new Retangulo(3, 8);
+r2.imprimeNome();
 
 var r3 = new Quadrado(3);
 r3.imprimeNome();
