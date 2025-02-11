@@ -32,4 +32,8 @@ let curso = {
 };
 
 //está desmembrando o array primos
-let [p1, p2, ... resto] = primos;
+let [p1, p2, ...resto] = primos; //...resto chama o restante do array depois de p2
+
+//desestruturação de objetos
+
+let { nome, turma, ...outrosCampos } = curso;// ...(rest operator)
