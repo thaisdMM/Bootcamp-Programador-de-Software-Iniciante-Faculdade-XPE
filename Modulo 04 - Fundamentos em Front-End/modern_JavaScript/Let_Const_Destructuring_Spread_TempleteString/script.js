@@ -32,4 +32,4 @@ let curso = {
 };
 
 //está desmembrando o array primos
-let [p1, p2, p3] = primos;
+let [p1, p2, ... resto] = primos;
