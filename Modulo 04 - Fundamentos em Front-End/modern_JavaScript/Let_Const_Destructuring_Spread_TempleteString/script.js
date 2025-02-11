@@ -57,4 +57,8 @@ let curso = {
    turma: 1,
 };
 
+// adicinou 17 no final de primos
 let primos2 = [... primos, 17];
+
+// adicionou 1 + primos + 17
+let primos3 = [1, ...primos, 17];
