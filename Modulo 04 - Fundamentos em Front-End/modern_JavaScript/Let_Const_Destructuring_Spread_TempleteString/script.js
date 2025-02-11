@@ -90,4 +90,7 @@ console.log(a + " + " + b + " = " + soma);
 // escreve dentro de 2 crases
 //faz a soma de fomrma mais concisa e entendível
 //não precisa ter substituição de variáveis, pode ter só string dentro da crase
-console.log(`${a} + ${b} = ${soma}`);
+
+//permite a quebra de linhas sem o \n e tb outros carecteres que não sao permitidos em strings normais como aspas
+console.log(`${a} + ${b} = 
+   ${soma}`);
