@@ -30,3 +30,6 @@ let curso = {
   presencial: false,
   turma: 1,
 };
+
+//está desmembrando o array primos
+let [p1, p2] = primos;
