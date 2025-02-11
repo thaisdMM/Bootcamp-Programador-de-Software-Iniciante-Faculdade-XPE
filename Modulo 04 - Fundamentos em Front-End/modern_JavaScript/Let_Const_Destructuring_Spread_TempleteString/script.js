@@ -34,6 +34,13 @@ let curso = {
 //está desmembrando o array primos
 let [p1, p2, ...resto] = primos; //...resto chama o restante do array depois de p2
 
-//desestruturação de objetos
+//desestruturação de objetos - na estruturaçao da declaração de um parâmetro ou de uma variável
 
-let { nome, turma, ...outrosCampos } = curso;// ...(rest operator)
+//pode trocar o nome da variavel
+let { nome : nomeCurso, turma, ...outrosCampos } = curso;// ...(rest operator)
+
+//desestruturação em parametros de funções
+
+function imprime({nome}) {
+   console.log(nome);
+}
