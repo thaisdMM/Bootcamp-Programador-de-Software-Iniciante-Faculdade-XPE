@@ -27,5 +27,8 @@ let names = usPresidents.map((item) => item.president);
 // 4. FILTER
 
 // permite filtar elementos do array
+// filter e map retornam um novo array e podem ser realizadas outras operações em cima desse array
 
-let replublicans = usPresidents.filter((item) => item.party == "Republican");
+let replublicans = usPresidents
+.filter((item) => item.party == "Republican")
+.map((item) => item.president);
