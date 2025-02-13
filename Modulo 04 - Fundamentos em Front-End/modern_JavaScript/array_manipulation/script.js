@@ -32,3 +32,11 @@ let names = usPresidents.map((item) => item.president);
 let replublicans = usPresidents
 .filter((item) => item.party == "Republican")
 .map((item) => item.president);
+
+// 5. FIND
+
+// Acha sempre o primeiro objeto do array
+
+let p1 = usPresidents.find((item) => item.party == "Democratic");
+
+
