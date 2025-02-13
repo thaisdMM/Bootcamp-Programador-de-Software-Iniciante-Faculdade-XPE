@@ -25,4 +25,5 @@ function RetanguloV2(altura, largura) {
 
 let r1 = new RetanguloV2(5, 6);
 
-let imprimeMensagem = (m) => console.log(m);
+//quando a função só tem um parametro dá para omitir o ()
+let imprimeMensagem = m => console.log(m);
