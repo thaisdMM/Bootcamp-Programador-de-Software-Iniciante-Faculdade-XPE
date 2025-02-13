@@ -19,15 +19,16 @@ var somaV2 = (a, b) => a + b;
 function RetanguloV2(altura, largura) {
   this.altura = altura;
   this.largura = largura;
-  this.area = () => this.altura * this.largura;   
-}
+  }
 
-/* arrow function pega o this de uma function mais externa
+RetanguloV2.prototype.area  = () => this.altura * this.largura;
+
+/* agora o this é o do escopo global
 
 var fn = r1.area
 undefined
 fn()
-30
+NaN
 */
 
 var r1 = new RetanguloV2(5, 6);
