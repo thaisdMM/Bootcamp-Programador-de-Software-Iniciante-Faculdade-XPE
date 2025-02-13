@@ -23,15 +23,14 @@ usPresidents.forEach((item, index) => {
 
 let names = usPresidents.map((item) => item.president);
 
-
 // 4. FILTER
 
 // permite filtar elementos do array
 // filter e map retornam um novo array e podem ser realizadas outras operações em cima desse array
 
 let replublicans = usPresidents
-.filter((item) => item.party == "Republican")
-.map((item) => item.president);
+  .filter((item) => item.party == "Republican")
+  .map((item) => item.president);
 
 // 5. FIND
 
@@ -45,11 +44,11 @@ let p1 = usPresidents.find((item) => item.party == "Democratic");
 // esse codigo vai retornar os nomes em ordem alfabética
 
 usPresidents.sort((i1, i2) => {
-   if(i1.president <i2.president) {
-      return -1;
-   } else if (i1.president > i2.president) {
-      return 1;
-   }else {
-      return 0;
-   }
+  if (i1.birth_year < i2.birth_year) {
+    return -1;
+  } else if (i1.birth_year > i2.birth_year) {
+    return 1;
+  } else {
+    return 0;
+  }
 });
