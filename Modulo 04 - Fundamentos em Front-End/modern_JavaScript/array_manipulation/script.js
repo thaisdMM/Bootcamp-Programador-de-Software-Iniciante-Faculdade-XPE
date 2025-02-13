@@ -19,5 +19,6 @@ usPresidents.forEach((item, index) => {
 
 // 3. MAP
 // > função de array que recebe uma outra função como parametro
+// dá para transformar os dados
 
-let names = usPresidents.map((item) => item.president);
+let names = usPresidents.map((item) => item.president + " " + item.took_office);
