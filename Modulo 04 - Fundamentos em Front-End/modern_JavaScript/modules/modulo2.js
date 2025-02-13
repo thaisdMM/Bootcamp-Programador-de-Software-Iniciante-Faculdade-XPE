@@ -1,5 +1,5 @@
-import { soma, subtrai } from "./modulo1.js";
+import { soma as adiciona, subtrai } from "./modulo1.js";
 
-console.log(soma(2, 2));
+console.log(adiciona(2, 2));
 
 console.log(subtrai(2, 2));
