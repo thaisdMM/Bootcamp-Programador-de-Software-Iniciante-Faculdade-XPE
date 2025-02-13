@@ -14,5 +14,10 @@ for (let item of usPresidents) {
 // 2. FOREACH
 
 usPresidents.forEach((item, index) => {
-   console.log(`${index} ${item.president}`)
+  //  console.log(`${index} ${item.president}`)
 });
+
+// 3. MAP
+// > função de array que recebe uma outra função como parametro
+
+let names = usPresidents.map((item) => item.president);
