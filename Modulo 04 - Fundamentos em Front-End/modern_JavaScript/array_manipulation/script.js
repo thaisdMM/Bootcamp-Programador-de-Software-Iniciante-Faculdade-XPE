@@ -39,4 +39,17 @@ let replublicans = usPresidents
 
 let p1 = usPresidents.find((item) => item.party == "Democratic");
 
+// 6. SORT
 
+// diferente das anteriores ela nao cria um novo array ela ordena o proprio array aonde foi chamada a função
+// esse codigo vai retornar os nomes em ordem alfabética
+
+usPresidents.sort((i1, i2) => {
+   if(i1.president <i2.president) {
+      return -1;
+   } else if (i1.president > i2.president) {
+      return 1;
+   }else {
+      return 0;
+   }
+});
