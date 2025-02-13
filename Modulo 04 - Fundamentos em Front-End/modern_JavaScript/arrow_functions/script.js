@@ -19,16 +19,10 @@ var somaV2 = (a, b) => a + b;
 function RetanguloV2(altura, largura) {
   this.altura = altura;
   this.largura = largura;
+  this.area = () => this.altura * this.largura;
   }
 
-RetanguloV2.prototype.area  = () => this.altura * this.largura;
 
-/* agora o this é o do escopo global
+let r1 = new RetanguloV2(5, 6);
 
-var fn = r1.area
-undefined
-fn()
-NaN
-*/
-
-var r1 = new RetanguloV2(5, 6);
+let imprimeMensagem = (m) => console.log(m);
