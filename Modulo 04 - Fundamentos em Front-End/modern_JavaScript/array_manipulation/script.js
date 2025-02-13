@@ -21,4 +21,11 @@ usPresidents.forEach((item, index) => {
 // > função de array que recebe uma outra função como parametro
 // dá para transformar os dados
 
-let names = usPresidents.map((item) => item.president + " " + item.took_office);
+let names = usPresidents.map((item) => item.president);
+
+
+// 4. FILTER
+
+// permite filtar elementos do array
+
+let replublicans = usPresidents.filter((item) => item.party == "Republican");
