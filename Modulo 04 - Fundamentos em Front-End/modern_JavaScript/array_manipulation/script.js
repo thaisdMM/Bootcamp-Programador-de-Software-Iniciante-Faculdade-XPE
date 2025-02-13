@@ -8,5 +8,11 @@ for (let i = 0; i < usPresidents.length; i++) {
   */
 
 for (let item of usPresidents) {
-   console.log(item.president)
+  // console.log(item.president)
 }
+
+// 2. FOREACH
+
+usPresidents.forEach((item, index) => {
+   console.log(item.president)
+});
