@@ -2,4 +2,8 @@ function soma(a, b) {
   return a + b;
 }
 
-export { soma };
+function subtrai(a, b) {
+   return a - b;
+}
+
+export { soma, subtrai };
