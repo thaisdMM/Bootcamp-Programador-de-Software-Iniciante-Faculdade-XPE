@@ -14,5 +14,5 @@ for (let item of usPresidents) {
 // 2. FOREACH
 
 usPresidents.forEach((item, index) => {
-   console.log(item.president)
+   console.log(`${index} ${item.president}`)
 });
